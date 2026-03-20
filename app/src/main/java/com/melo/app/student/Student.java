@@ -1,6 +1,7 @@
-package com.melo.app;
-
+package com.melo.app.student;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.melo.app.StudentProfile;
+import com.melo.app.school.school;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

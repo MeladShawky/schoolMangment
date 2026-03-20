@@ -1,6 +1,8 @@
-package com.melo.app;
+package com.melo.app.student;
 
 import org.springframework.stereotype.Service;
+
+import com.melo.app.school.school;
 
 @Service
 public class StudentMapper {

@@ -1,4 +1,4 @@
-package com.melo.app;
+package com.melo.app.student;
 
 import java.util.List;
 import java.util.stream.Collectors;

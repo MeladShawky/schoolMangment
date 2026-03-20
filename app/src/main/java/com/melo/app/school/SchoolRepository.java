@@ -1,4 +1,4 @@
-package com.melo.app;
+package com.melo.app.school;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

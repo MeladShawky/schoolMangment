@@ -1,19 +1,19 @@
-package com.melo.app;
+package com.melo.app.school;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SchoolService {
-    private final AppApplication appApplication;
+
     private final SchoolRepository schoolRepository;
     private final SchoolMapper schoolMapper;
 
 
 
-    public SchoolService(AppApplication appApplication, SchoolRepository schoolRepository, SchoolMapper schoolMapper) {
-        this.appApplication = appApplication;
+    public SchoolService( SchoolRepository schoolRepository, SchoolMapper schoolMapper) {
         this.schoolRepository = schoolRepository;
         this.schoolMapper = schoolMapper;
     }

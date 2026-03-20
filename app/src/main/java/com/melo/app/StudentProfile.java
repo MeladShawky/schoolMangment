@@ -1,5 +1,7 @@
 package com.melo.app;
 
+import com.melo.app.student.Student;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

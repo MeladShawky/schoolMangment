@@ -1,4 +1,4 @@
-package com.melo.app;
+package com.melo.app.student;
 
 public record StudentDto(
      String firstName,
