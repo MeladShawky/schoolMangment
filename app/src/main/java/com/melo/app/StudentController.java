@@ -21,12 +21,33 @@ public class StudentController {
     }
     ////////////////////////////////////////////////////////////
     @PostMapping("/students")
-    public Student post(
-       @RequestBody Student student
+    public StudentResponseDto post(
+       @RequestBody StudentDto studentDto
     ){
-        System.out.println("post is caling..................");
-        return studentRepository.save(student);
+        var student=toStudent(studentDto);
+        var savedStudent= studentRepository.save(student);
+        return toStudentResponseDto(savedStudent);
     }
+
+    private Student toStudent(StudentDto dto){
+        var student=new Student();
+        var school=new school();
+        student.setFirstName(dto.firstName());
+        student.setLastName(dto.lastName());
+        student.setEmail(dto.email());
+        school.setId(dto.schoolId());
+        student.setSchool(school);
+        return student;
+    }
+
+    private StudentResponseDto toStudentResponseDto(Student student){
+       return new StudentResponseDto(
+         student.getFirstName(),
+        student.getLastName(),
+        student.getEmail()
+       );
+    }
+
     ////////////////////////////////////////////////////////
     @GetMapping("/students")
     public List<Student> findAllStudents() {

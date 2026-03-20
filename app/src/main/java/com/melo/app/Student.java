@@ -1,5 +1,7 @@
 package com.melo.app;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,10 +40,27 @@ public class Student {
     @JoinColumn(
         name = "school_id"
     )
+    @JsonBackReference
     private school school;
 
     public Student(){
         
+    }
+
+    public StudentProfile getStudentProfile() {
+        return this.studentProfile;
+    }
+
+    public void setStudentProfile(StudentProfile studentProfile) {
+        this.studentProfile = studentProfile;
+    }
+
+    public school getSchool() {
+        return this.school;
+    }
+
+    public void setSchool(school school) {
+        this.school = school;
     }
 
 
