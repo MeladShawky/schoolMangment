@@ -1,4 +1,4 @@
-package com.melo.app;
+package com.melo.app.studentProfile;
 
 import com.melo.app.student.Student;
 
